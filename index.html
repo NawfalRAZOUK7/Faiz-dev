@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SORME - SITE</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/44fea48c87.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cbac2fd12e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,6 +15,8 @@
         <div class="logo">
             <h1><span>.STOR</span>ME</h1>
         </div>
+        <!-- menu responsive -->
+        <div class="toggle-menu"></div>
         <ul class="menu">
             <li><a href="#">Film</a></li>
             <li><a href="#">Serie</a></li>
@@ -41,8 +43,18 @@
             </ul>
         </div>
         <!-- right div -->
-        <div class="right"></div>
+        <div class="right">
+            <img src="images/img.png">
+        </div>
     </section>
+    <script>
+        var menu = document.querySelector(".menu");
+        var toggle_menu = document.querySelector(".toggle-menu");
+        toggle_menu.onclick = function () {
+            toggle_menu.classList.toggle('active');
+            menu.classList.toggle('responsive');
+        }
+    </script>
 </body>
 
 </html>

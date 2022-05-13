@@ -19,7 +19,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 10%;
     height: 80px;
 }
 header .logo{
@@ -50,10 +50,10 @@ header .menu li a::before {
     position: absolute;
     bottom: -5px;
     content: "";
-    width: 100%;
+    width: 0%;
     height: 5px;
-    border-radius: 6PX;
-    transition: 0.5S;
+    border-radius: 6px;
+    transition: 0.5s;
     background-color: #eea16d;
 }
 
@@ -113,3 +113,118 @@ section {
     font-size: 13px;
     margin: 15px 0;
 }
+.icons {
+    list-style: none;
+    display: flex;
+    margin-left: -25px;
+}
+.icons li {
+    margin: 15px 0;
+}
+.icons li i {
+    color: #eea16d;
+    font-size: 20px;
+    border: 2px solid #eea16d;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icons li i:hover{
+    background-color: #eea16d;
+    color: #fff;
+    transform: scale(1.5);
+    color: #fff;
+}
+
+.right {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.right img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Responsive */
+
+@media (max-width:904px) {
+    header {
+        padding: 0 5%;
+    }
+    header .menu{
+        display: none;
+    }
+    section {
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    section .left , section .right {
+        width: 100%;
+    }
+    .toggle-menu {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+    }
+    .toggle-menu::before {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 25px;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 10px 0 #fff;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    .toggle-menu.active::before{
+        transform: translateY(0) rotate(-45deg);
+        box-shadow: 0 0px 0 #fff;
+    }
+    .toggle-menu::after{
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 25px;
+        background-color: #fff;
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .toggle-menu.active::after {
+        transform: translateY(0) rotate(45deg);
+    }
+    header .menu.responsive {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #191513;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    header .menu.responsive li {
+        margin: 25px 0;
+    }
+}
+
